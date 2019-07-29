@@ -1,9 +1,8 @@
-{% load static %}
-
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Music</title>
+<title>Artists</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Music template project">
@@ -13,14 +12,11 @@
 <link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.3.4/owl.carousel.css'%}">
 <link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.3.4/owl.theme.default.css'%}">
 <link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.3.4/animate.css'%}">
-<link rel="stylesheet" type="text/css" href="{% static 'styles/main_styles.css'%}">
-<link rel="stylesheet" type="text/css" href="{% static 'styles/responsive.css'%}">
-<link rel="stylesheet" type="text/css" href="{% static 'audio.css'%}">
-<link href='https://fonts.googleapis.com/css?family=Allerta' rel='stylesheet'>
-<link href="{% static 'css/style.css'%}" rel="stylesheet">
-
+<link rel="stylesheet" type="text/css" href="{% static 'styles/artists.css'%}">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/artists_responsive.css'%}">
 </head>
 <body>
+
 <div class="super_container">
 
 	<!-- Header -->
@@ -42,15 +38,16 @@
 						<!-- Main Navigation -->
 						<nav class="main_nav">
 							<ul class="d-flex flex-row align-items-center justify-content-start">
-								
+								<li><a href="{%url 'library'%}">Home</a></li>
+								<li class="active"><a href="{%url 'artists'%}">Artists</a></li>
+								<li><a href="{%url 'blog'%}">News</a></li>
 							</ul>
 						</nav>
 
 						<!-- User area -->
 						<div class="log_reg d-flex flex-row align-items-center justify-content-start">
 							<ul class="d-flex flex-row align-items-start justify-content-start">
-								<li><a href="{% url 'user:user-login' %}">Login</a></li>
-								<li><a href="{% url 'user:signup' %}">Register</a></li>
+
 							</ul>
 
 							<!-- Hamburger -->
@@ -72,9 +69,9 @@
 				<nav class="menu_nav">
 					<ul class="d-flex flex-column align-items-center justify-content-start">
 						<li><a href="{%url 'index'%}">Home</a></li>
-						<li><a href="{%url 'artists'%}">Artists</a></li>\
-                        <li><a href="{%url 'blog'%}">News</a></li>
-
+						<li><a href="{%url 'artists'%}">Artists</a></li>
+						<li><a href="{%url 'blog'%}">News</a></li>
+						<li><a href="{%url 'library'%}">Library</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -84,59 +81,57 @@
 	<!-- Home -->
 
 	<div class="home">
-
-		<!-- Home Slider -->
-		<div class="home_slider_container">
-			<div class="owl-carousel owl-theme home_slider">
-
-
-
-				<!-- Slide -->
-				<div class="slide">
-					<div class="home_container">
-						<div class="container">
-							<div class="row">
-								<div class="col">
-									<div class="home_content">
-										<div class="home_title_container text-center">
-											<div class="home_title islive text-center"><h1><span>music.KG</span></h1></div>
-												<div>
-											<font size="7"><h1>Добро пожаловать, чтобы продолжить войдите в систему</h1>
-											<div class="text-center"><h1><span><a href="{% url 'user:user-login' %}">Войти</a></h1>
-												<h1><a href="{% url 'user:signup' %}">Зарегистрироваться</a></h1></span>
-											</div>
-												 <user></user></font>
-												</div>
-
-										</div>
-											</form>
-										</div>
-									</div>
-								</div>
-							</div>
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/artists.jpg" data-speed="0.8"></div>
+		<div class="home_container">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="home_content text-center">
+							<div class="home_title">Artists</div>
 						</div>
 					</div>
 				</div>
 			</div>
+		</div>
+	</div>
 
+	<!-- Search -->
 
-<div>
+<h1>Ничего не найдено</h1>
+	<!-- Artists -->
 
+	<div class="artists">
+		<div class="letters">
+			<ul class="d-flex flex-row align-items-start justify-content-center flex-wrap">
+				<li><a href="{%url 'a'%}">a</a></li>
+				<li><a href="{%url 'b'%}">b</a></li>
+				<li><a href="{%url 'c'%}">c</a></li>
+				<li><a href="{%url 'd'%}">d</a></li>
+				<li><a href="{%url 'e'%}">e</a></li>
+				<li><a href="{%url 'f'%}">f</a></li>
+				<li><a href="{%url 'g'%}">g</a></li>
+				<li><a href="{%url 'h'%}">h</a></li>
+				<li><a href="{%url 'i'%}">i</a></li>
+				<li><a href="{%url 'j'%}">j</a></li>
+				<li><a href="{%url 'k'%}">k</a></li>
+				<li><a href="{%url 'l'%}">l</a></li>
+				<li><a href="{%url 'm'%}">m</a></li>
+				<li><a href="{%url 'n'%}">n</a></li>
+				<li><a href="{%url 'o'%}">o</a></li>
+				<li><a href="{%url 'p'%}">p</a></li>
+				<li><a href="{%url 'q'%}">q</a></li>
+				<li><a href="{%url 'r'%}">r</a></li>
+				<li><a href="{%url 's'%}">s</a></li>
+				<li><a href="{%url 't'%}">t</a></li>
+				<li><a href="{%url 'u'%}">u</a></li>
+				<li><a href="{%url 'v'%}">v</a></li>
+				<li><a href="{%url 'w'%}">w</a></li>
+				<li><a href="{%url 'x'%}">x</a></li>
+				<li><a href="{%url 'y'%}">y</a></li>
+				<li><a href="{%url 'z'%}">z</a></li>
+			</ul>
+		</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div>
 
 <script src="{% static 'js/jquery-3.3.1.min.js'%}"></script>
 <script src="{% static 'styles/bootstrap-4.1.2/popper.js'%}"></script>
@@ -153,6 +148,6 @@
 <script src="{% static 'plugins/progressbar/progressbar.min.js'%}"></script>
 <script src="{% static 'plugins/parallax-js-master/parallax.min.js'%}"></script>
 <script src="{% static 'plugins/scrollTo/jquery.scrollTo.min.js'%}"></script>
-<script src="{% static 'js/custom.js'%}"></script>
+<script src="{% static 'js/artists.js'%}"></script>
 </body>
 </html>

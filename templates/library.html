@@ -16,11 +16,13 @@
 <link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.3.4/animate.css'%}">
 <link rel="stylesheet" type="text/css" href="{% static 'styles/main_styles.css'%}">
 <link rel="stylesheet" type="text/css" href="{% static 'styles/responsive.css'%}">
+<link href="{% static 'css/style.css'%}" rel="stylesheet">
+
 </head>
 <body>
 
 <div class="super_container">
-	
+
 	<!-- Header -->
 
 	<header class="header">
@@ -40,22 +42,20 @@
 						<!-- Main Navigation -->
 						<nav class="main_nav">
 							<ul class="d-flex flex-row align-items-center justify-content-start">
-								<a href="{%url 'index'%}">Home</a></li>
+
+								<li class="active"><a href="{%url 'library'%}">Home</a></li>
 								<li><a href="{%url 'artists'%}">Artists</a></li>
 								<li><a href="{%url 'blog'%}">News</a></li>
-								<li class="active"><a href="{%url 'library'%}">Library</a></li>
 							</ul>
 						</nav>
 
 						<!-- User area -->
 						<div class="log_reg d-flex flex-row align-items-center justify-content-start">
 							<ul class="d-flex flex-row align-items-start justify-content-start">
-								<li><a href="{% url 'user:user-login' %}">Login</a></li>
-								<li><a href="{% url 'user:signup' %}">Register</a></li>
+
+
 							</ul>
 
-							<!-- Hamburger -->
-							<div class="hamburger d-flex flex-column align-items-end justify-content-between"><div></div><div></div><div></div></div>
 						</div>
 					</div>
 				</div>
@@ -65,12 +65,12 @@
 
 	<!-- Footer -->
 
-	<footer class="footer">
-		<div class="background_image" style="background-image:url(images/footer.jpg)"></div>
-		<div class="footer_content">
-			<div class="container">
-				<div class="row">
-					<div class="col text-center">
+		<footer class="footer">
+			<div class="background_image" style="background-image:url(images/footer.jpg)"></div>
+			<div class="footer_content">
+				<div class="container">
+					<div class="row">
+						<div class="col text-center">
 
 						<!-- Logo -->
 						<div class="logo">
@@ -80,32 +80,57 @@
 							</a>
 						</div>
 
-						<!-- Footer Social -->
-						<div class="footer_social">
-							<ul class="d-flex flex-row align-items-center justify-content-center">
-								<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
-							</ul>
-						</div>
+
 
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="footer_bar">
-			<div class="container">
-				<div class="row">
-					<div class="col">
-					</div>
-				</div>
-			</div>
-		</div>
-			
-	</footer>
-</div>
+	
+			<p><img src="{% static 'images/infinite_power.jpg'%}" width="350" height="350" align="left"><h1>TheFatRat-Infinite Power</h1>
+				<br>
+		  <audio controls>
+				<source src="https://ia801200.us.archive.org/16/items/TheFatRatInfinitePower/TheFatRat%20-%20Infinite%20Power.ogg" type="audio/ogg">
+			</audio><p>
+<br><br><br><br><br><br>
+
+<p><img src="{% static 'images/get_lucky.jpeg'%}" width="350" height="350" align="left"><h1>DaftPunk-Get Lucky</h1>
+	<br>
+<audio controls>
+	<source src="https://ia800406.us.archive.org/16/items/DaftPunkGetLuckyFullVideo_201605/Daft%20Punk%20-%20Get%20Lucky%20%28Full%20Video%29.ogg" type="audio/ogg">
+</audio><p>
+<br><br><br><br><br><br><br>
+
+<p><img src="{% static 'images/phoenix.jpg'%}" width="350" height="350" align="left"><h1>Fall Out Boy- The Phoenix</h1>
+	<br>
+<audio controls>
+	<source src="https://ia800400.us.archive.org/21/items/FallOutBoyThePhoenixpleer.com/Fall%20Out%20Boy%20-%20The%20Phoenix%20%5Bpleer.com%5D.ogg" type="audio/ogg">
+</audio><p>
+<br><br><br><br><br><br><br>
+
+<p><img src="{% static 'images/canthold.png'%}" width="350" height="350" align="left"><h1>Macklemore & Ryan Lewis – Can't Hold Us</h1>
+	<br>
+<audio controls>
+	<source src="https://ia802702.us.archive.org/1/items/MacklemoreXRyanLewisCantHoldUsFeat.RayDaltonSinapzTrapBootleg/Macklemore%20X%20Ryan%20Lewis%20-%20Can%27t%20Hold%20Us%20Feat.%20Ray%20Dalton%20%28Sinapz%20Trap%20Bootleg%29.ogg" type="audio/ogg">
+</audio><p>
+<br><br><br><br><br>
+
+<p><img src="{% static 'images/run.jpg'%}" width="350" height="350" align="left"><h1>Woodkid-Run Boy Run</h1>
+	<br>
+<audio controls>
+	<source src="https://ia801303.us.archive.org/29/items/WoodkidRunBoyRunLYRICSHd720/Woodkid%20%20%20Run%20Boy%20Run%20%20LYRICS%20%20hd720.ogg" type="audio/ogg">
+</audio><p>
+<br><br><br><br><br><br><br>
+
+<p><img src="{% static 'images/radioactive.jpg'%}" width="350" height="350" align="left"><h1>Imagine Dragons-Radioactive</h1>
+	<br>
+<audio controls>
+	<source src="https://ia800204.us.archive.org/16/items/Radioactive_201601/Radioactive.ogg" type="audio/ogg">
+</audio><p>
+<br><br><br><br><br>
+
+
+
 
 <script src="% static 'js/jquery-3.3.1.min.js'%}"></script>
 <script src="% static 'styles/bootstrap-4.1.2/popper.js'%}"></script>
